@@ -4,3 +4,4 @@ data
 environ/
 __pycache__/
 data/urban_service_requests.csv
+.astro/
