@@ -1,7 +1,6 @@
 .env
 environ
 data
-.env
 environ/
 __pycache__/
 data/urban_service_requests.csv
