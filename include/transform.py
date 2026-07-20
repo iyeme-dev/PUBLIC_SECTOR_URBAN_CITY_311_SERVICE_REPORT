@@ -2,15 +2,12 @@ import polars as pl
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv()
-
 
 storage_options = {
     "account_name": "urbancitystorageiyeme",
     "account_key": os.getenv("ACCOUNT_KEY")
 }
-
 
 def transform():
     source_uri = "az://bronze/urban_service_requests.csv"
@@ -50,4 +47,3 @@ def transform():
 
     return None
 
-transform()

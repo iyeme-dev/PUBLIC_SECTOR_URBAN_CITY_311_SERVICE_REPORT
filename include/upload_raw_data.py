@@ -6,7 +6,7 @@ from pathlib import Path
 
 location = Path(__file__).resolve().parent
 
-project_root = location
+project_root = location.parent
 
 load_dotenv()
 
@@ -47,4 +47,3 @@ def upload_data():
 
     return None
 
-upload_data()
