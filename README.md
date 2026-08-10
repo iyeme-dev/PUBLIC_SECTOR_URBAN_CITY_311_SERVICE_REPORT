@@ -381,11 +381,11 @@ terraform apply -var="pg_password=YOUR_PASSWORD"
 
 ### Terraform-Provisioned Storage Account
 
-![Storage account created with Terraform](img/terraform-storage-account.png)
+![Storage account created with Terraform](img/storage account created with terraform.png)
 
 ### Terraform-Provisioned Bronze and Silver Containers
 
-![Bronze and Silver containers created with Terraform](img/terraform-containers.png)
+![Bronze and Silver containers created with Terraform](img/storage_account_created_with_terraform.png)
 
 ---
 
@@ -460,15 +460,9 @@ Make sure Docker Desktop is running, then execute:
 astro dev start
 ```
 
-### Docker Containers
-
-Astro runs the Airflow components in Docker.
-
-![Docker containers used by Astro Airflow](img/docker-containers.png)
-
 ### Airflow Started Successfully
 
-![Airflow local environment started](img/airflow-started.png)
+![Airflow local environment started](img/airflow_started.png)
 
 ### DAG
 
@@ -478,7 +472,7 @@ The main DAG is:
 urban_city_requests
 ```
 
-![Urban City DAG in Airflow](img/airflow-urban-city-dag.png)
+![Urban City DAG in Airflow](img/urban_city_dag_in_airflow.png)
 
 ### Task Sequence
 
@@ -498,9 +492,7 @@ The third task executes `dags/sql/urban_city.sql` through the PostgreSQL connect
 
 ### Successful DAG Run
 
-![Successful Airflow DAG graph](img/airflow-dag-success-graph.png)
-
-![Successful Airflow task instances](img/airflow-task-success.png)
+![Successful Airflow DAG graph](img/airflow_task_success.png)
 
 ### Airflow Connections
 
@@ -520,7 +512,7 @@ Azure Data Factory performs the final Silver-to-Gold copy.
 
 ### Data Factory Resource
 
-![Azure Data Factory](img/azure-data-factory.png)
+![Azure Data Factory](img/azure_blob_storage.png)
 
 ### Source
 
@@ -547,10 +539,6 @@ Table: gold.urban_city_requests
 
 ![Successful Data Factory debug](img/adf-debug-success.png)
 
-### Successful Silver-to-Gold Pipeline
-
-![Successful Silver-to-Gold pipeline](img/adf-silver-to-gold-success.png)
-
 ### Copy Activity Details
 
 The verified Data Factory run:
@@ -561,21 +549,11 @@ The verified Data Factory run:
 - Copied approximately 138.785 MB from Blob Storage
 - Wrote approximately 58.718 MB to PostgreSQL
 
-![Azure Blob Storage to PostgreSQL copy details](img/adf-blob-to-postgres-details.png)
-
 ---
 
 ## PostgreSQL Gold Layer
 
 Azure Database for PostgreSQL Flexible Server is used as the final storage layer.
-
-### Azure PostgreSQL Database
-
-![Azure PostgreSQL database](img/azure-postgres-database.png)
-
-### PostgreSQL Endpoint
-
-![Azure PostgreSQL endpoint](img/azure-postgres-endpoint.png)
 
 ### Gold Schema Validation
 
@@ -613,14 +591,6 @@ SELECT *
 FROM gold.urban_city_requests
 LIMIT 20;
 ```
-
-![Preview records in pgAdmin](img/pgadmin-preview-records.png)
-
-### Loaded PostgreSQL Data
-
-![Data loaded into PostgreSQL](img/postgres-data.png)
-
-![PostgreSQL table](img/postgres-table.png)
 
 ---
 

@@ -7,3 +7,9 @@ logs/
 airflow.db
 airflow.cfg
 credentials.sh
+credentials.txt
+.terraform
+*.hcl
+*.tfstate
+*.backup
+*.tfvars

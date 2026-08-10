@@ -5,4 +5,10 @@ environ/
 __pycache__/
 data/urban_service_requests.csv
 airflow_-settings.yaml
+credentials.txt
+.terraform
+*.hcl
+*.tfstate
+*.backup
+*.tfvars
 credentials.sh
